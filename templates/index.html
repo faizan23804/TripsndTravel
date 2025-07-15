@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Package Predictor</title>
+    <style>
+        body { font-family: Arial; background: #eef; padding: 20px; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px; width: 100%; background: #007bff; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Will the Customer Buy the Wellness Package?</h2>
+        <form action="/predict" method="POST">
+            <label>Age</label><input type="number" name="Age" required>
+            <label>City Tier</label><input type="number" name="CityTier" min="1" max="3" required>
+            <label>Duration Of Pitch</label><input type="number" name="DurationOfPitch" required>
+            <label>Number Of Followups</label><input type="number" name="NumberOfFollowups" required>
+            <label>Preferred Property Star</label><input type="number" name="PreferredPropertyStar" required>
+            <label>Number Of Trips</label><input type="number" name="NumberOfTrips" required>
+            <label>Passport (1 = Yes, 0 = No)</label><input type="number" name="Passport" required>
+            <label>Pitch Satisfaction Score (1-5)</label><input type="number" name="PitchSatisfactionScore" required>
+            <label>Own Car (1 = Yes, 0 = No)</label><input type="number" name="OwnCar" required>
+            <label>Monthly Income</label><input type="number" name="MonthlyIncome" required>
+            <label>Total Visitors (Adults + Children)</label><input type="number" name="Total_Visitors" required>
+
+            <label>Type of Contact</label>
+            <select name="TypeofContact">
+                <option value="Self Enquiry">Self Enquiry</option>
+                <option value="Company Invited">Company Invited</option>
+            </select>
+
+            <label>Occupation</label>
+            <select name="Occupation">
+                <option value="Salaried">Salaried</option>
+                <option value="Small Business">Small Business</option>
+                <option value="Large Business">Large Business</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label>Gender</label>
+            <select name="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label>Product Pitched</label>
+            <select name="ProductPitched">
+                <option value="Basic">Basic</option>
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Super Deluxe">Super Deluxe</option>
+                <option value="King">King</option>
+            </select>
+
+            <label>Marital Status</label>
+            <select name="MaritalStatus">
+                <option value="Married">Married</option>
+                <option value="Unmarried">Unmarried</option>
+                <option value="Divorced">Divorced</option>
+            </select>
+
+            <label>Designation</label>
+            <select name="Designation">
+                <option value="Executive">Executive</option>
+                <option value="Manager">Manager</option>
+                <option value="Senior Manager">Senior Manager</option>
+                <option value="AVP">AVP</option>
+                <option value="VP">VP</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
