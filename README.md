@@ -47,3 +47,7 @@ Trips & Travel.com is planning to introduce a new "Wellness Tourism Package" —
 ```bash
 git clone https://github.com/faizan23804/TripsndTravel.git
 cd TripsndTravel
+
+pip install -r requirements.txt
+
+python app.py
