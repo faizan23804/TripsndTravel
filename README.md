@@ -37,3 +37,13 @@ Trips & Travel.com is planning to introduce a new "Wellness Tourism Package" —
 
 ## 📁 Project Structure
 
+
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/faizan23804/TripsndTravel.git
+cd TripsndTravel
